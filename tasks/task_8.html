@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 8</title>
+  </head>
+
+  <body>
+    <h1>Задача 8</h1>
+    <p>
+      Створити функцію, яка виводить банер у функцію передаються: зображення,
+      заголовок та посилання, куди переходимо при кліку на зображення тег img
+      повине знаходитись у середині тега a: <a> <img src="”шлях”" /> </a>
+    </p>
+
+    <script>
+      //  Вводимо необхідні дані
+      let titleBan = prompt("ВВедіть заголовок")
+      let linkBan = prompt(
+        "ВВедіть посилання куди хочете щоб Вас завела картинка"
+      )
+      let imagaBan = parseFloat(prompt("Введіть номер зображення від 1 до 4"))
+      // function
+      function banner(titleBan, linkBan, imagaBan) {
+        document.write(
+          `<h2>${titleBan}</h2><a href="https://www.${linkBan}" target="_blank"><img src="../img/image${imagaBan}.jpg" alt="img"></a> `
+        )
+      }
+
+      //Виводимо результат
+      banner(titleBan, linkBan, imagaBan)
+    </script>
+  </body>
+</html>

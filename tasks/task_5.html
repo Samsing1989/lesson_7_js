@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 5</title>
+  </head>
+
+  <body>
+    <h1>Задача 5</h1>
+    <p>Створити окремі функції, які переводять:</p>
+    <ol>
+      <li>Сантиметри у дюйми;</li>
+      <li>Кілограми у фунти;</li>
+      <li>Кілометри у милі.</li>
+    </ol>
+
+    <script>
+      //1. function
+      function antimetersToInches(centimeters) {
+        return centimeters * 0.3937 //1см еквівалентний 0,39370 дюйма .
+      }
+      function kilogramsToPounds(kilograms) {
+        return kilograms * 2.2046 //В одному кг 2.2046 фунтів.
+      }
+      function kilometersToMiles(kilometers) {
+        return kilometers * 0.6214 //1км еквівалентний 0,6214 милі
+      }
+
+      //Ввести змінні
+      let centimeters = parseFloat(prompt("Введіть сантиметри"))
+      let kilograms = parseFloat(prompt("Введіть кілограми"))
+      let kilometers = parseFloat(prompt("Введіть кілометри"))
+
+      let inches = antimetersToInches(centimeters)
+      let pounds = kilogramsToPounds(kilograms)
+      let Miles = kilometersToMiles(kilometers)
+
+      // 3. Виводимо результат
+      document.write(
+        `Сантиметри у дюйми = ${inches} <br> Кілограми у фунти = ${pounds} <br>
+      Кілометри у милі = ${Miles}`
+      )
+    </script>
+  </body>
+</html>

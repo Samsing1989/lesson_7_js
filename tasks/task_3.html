@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+  </head>
+
+  <body>
+    <h1>Задача 3</h1>
+    <p>Створити окремі функції, які для 4 чисел знаходять:</p>
+    <ol>
+      <li>суму;</li>
+      <li>добуток;</li>
+      <li>середнє арифметичне;</li>
+      <li>мінімальне значення.</li>
+    </ol>
+
+    <script>
+      //1. function
+      function numberFrithmeticSum(a, b, c, d) {
+        return a + b + c + d
+      }
+      function numberFrithmeticProduct(a, b, c, d) {
+        return a * b * c * d
+      }
+      function numberFrithmeticAverage(a, b, c, d) {
+        return (a + b + c + d) / 4
+      }
+      function numberFrithmeticMin(a, b, c, d) {
+        let getMin
+        if (a < b && a < c && a < d) getMin = a
+        else if (b < a && b < c && b < c) getMin = b
+        else if (c < a && c < b && c < d) getMin = c
+        else getMin = d
+        return getMin
+      }
+      //Ввести змінні
+      let a = parseFloat(prompt("перше число"))
+      let b = parseFloat(prompt("друге число"))
+      let c = parseFloat(prompt("третє число"))
+      let d = parseFloat(prompt("четверте число"))
+
+      let sum = numberFrithmeticSum(a, b, c, d)
+      let product = numberFrithmeticProduct(a, b, c, d)
+      let averag = numberFrithmeticAverage(a, b, c, d)
+      let min = numberFrithmeticMin(a, b, c, d)
+      // 3. Виводимо результат
+      document.write(
+        `суму = ${sum} <br> добуток = ${product} <br>
+      середнє арифметичне = ${averag} <br> мінімальне значення = ${min}`
+      )
+    </script>
+  </body>
+</html>

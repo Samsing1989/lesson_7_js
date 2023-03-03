@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 10</title>
+  </head>
+
+  <body>
+    <h1>Задача 10</h1>
+    <p>
+      Дано покази температур (довільна кількість). Розробити функцію, яка
+      дозволить знайти середнє значення для додатних показів температури.
+    </p>
+    <script>
+      function positiveTemperatureIndicators() {
+        let temperSum = 0
+        let counterTemperature = 0
+        let numberTemperature = parseInt(prompt("Введіть кількість показників"))
+
+        while (!isNaN(numberTemperature)) {
+          if (numberTemperature > 0) {
+            temperSum = temperSum + numberTemperature
+            counterTemperature++
+          }
+          numberTemperature = parseInt(prompt("Введіть кількість показників"))
+        }
+        let averageTemperature
+        if (counterTemperature > 0)
+          averageTemperature = temperSum / counterTemperature
+        return averageTemperature
+      }
+      let average = positiveTemperatureIndicators()
+      document.write(`Середне значення всіх додатніх - ${average}`)
+    </script>
+  </body>
+</html>

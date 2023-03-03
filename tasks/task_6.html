@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 9</title>
+  </head>
+
+  <body>
+    <h1>Задача 9</h1>
+    <p>
+      Створити функцію, яка створює таблицю з вказаною кількістю рядків і
+      стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+    </p>
+    <script>
+      //1. function
+      function table(row, colm) {
+        let msg = 8
+        document.write(`<table border="1px">`)
+        for (let i = 0; i < row; i++) {
+          document.write(`<tr>`)
+          for (let j = 0; j < colm; j++) {
+            document.write(`<td>${msg}</td>`)
+          }
+          document.write(`</tr>`)
+        }
+        //Виводимо результат
+        document.write(`</table>`)
+        return row, colm
+      }
+      //Ввести змінні
+      let row = parseFloat(prompt("Введіть кількість рядків"))
+      let colm = parseFloat(prompt("Введіть кількість стовців"))
+
+      let result = table(row, colm)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 4</title>
+  </head>
+
+  <body>
+    <h1>Задача 4</h1>
+    <p>
+      Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька
+      результатів: кількість парних, кількість додатних, кількість більших за
+      100.
+    </p>
+    <script>
+      //зміні
+      let numberEven = 0
+      let NumberPositiveOnes = 0
+      let numberGreaterThan = 0
+      //function
+      function finds(a, b, c) {
+        if (a % 2 === 0) numberEven++
+        if (b % 2 === 0) numberEven++
+        if (c % 2 === 0) numberEven++
+        if (a > 0) NumberPositiveOnes++
+        if (b > 0) NumberPositiveOnes++
+        if (c > 0) NumberPositiveOnes++
+        if (a > 100) numberGreaterThan++
+        if (b > 100) numberGreaterThan++
+        if (c > 100) numberGreaterThan++
+        return numberEven, NumberPositiveOnes, numberGreaterThan
+      }
+      //Ввести змінні
+      let a = parseFloat(prompt("перше число"))
+      let b = parseFloat(prompt("друге число"))
+      let c = parseFloat(prompt("третє число"))
+      let result = finds(a, b, c)
+      //Виводимо результат
+      document.write(
+        `кількість парних - ${numberEven},<br> кількість додатних - ${NumberPositiveOnes},<br> кількість більших за
+      100. - ${numberGreaterThan}`
+      )
+    </script>
+  </body>
+</html>
